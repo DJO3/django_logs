@@ -1,0 +1,8 @@
+
+*.pyc
+
+*.sqlite3
+
+*.pyc
+
+django_logs/parse/migrations/__init__.py
