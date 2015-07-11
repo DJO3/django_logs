@@ -11,3 +11,5 @@ class Entry(models.Model):
     referer = models.CharField(max_length=200)
     user_agent = models.CharField(max_length=200)
     mobile = models.BooleanField()
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)

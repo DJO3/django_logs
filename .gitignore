@@ -6,3 +6,5 @@ django_logs/parse/migrations/*
 
 
 *.pyc
+
+*.pyc
