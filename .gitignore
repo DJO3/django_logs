@@ -1,10 +1,12 @@
-*.pyc
+# folders
+.idea
+
+#file types
 *.sqlite3
 *.pyc
 
+#files
 django_logs/parse/migrations/*
+django_logs/django_logs/dev.py
 
 
-*.pyc
-
-*.pyc
