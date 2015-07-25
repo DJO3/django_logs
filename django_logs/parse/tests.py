@@ -1,6 +1,6 @@
-from django.test import TestCase
 from datetime import datetime
-from .parse_access_logs import Parse
+from django.test import TestCase
+from parse.parse_access_logs import Parse
 from .models import Entry
 
 

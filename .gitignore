@@ -10,3 +10,5 @@ django_logs/parse/migrations/*
 django_logs/django_logs/dev.py
 
 
+
+*.pyc
