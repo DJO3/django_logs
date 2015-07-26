@@ -1,10 +1,11 @@
 from datetime import datetime
 from django.test import TestCase
-from parse.parse_access_logs import Parse
+from parse.management.parse_access_logs import Parse
 from .models import Entry
 
 
 class ParseTestCase(TestCase):
+    # Creates sample Entry
     def setUp(self):
         Entry.objects.create(
             real_ip="192.168.1.12",
@@ -18,13 +19,15 @@ class ParseTestCase(TestCase):
             mobile=False
         )
 
+    # Retrieves sample Entry and verifies IP address field.
     def test_entry(self):
         entry = Entry.objects.get(real_ip="192.168.1.12")
         self.assertEqual(entry.real_ip, "192.168.1.12")
 
+    # Tests generator for parse_access_logs.py.
     def test_entry_parse_script(self):
-        path = "/Users/dave/Downloads/log"
-        logs = Parse(path)
+        log_dir = "/Users/dave/Downloads/log"
+        logs = Parse(log_dir)
         entries = logs.parse()
 
         for entry in entries:
@@ -39,3 +42,4 @@ class ParseTestCase(TestCase):
                 user_agent=entry["user_agent"],
                 mobile=entry["mobile"]
             )
+
