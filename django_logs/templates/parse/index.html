@@ -1,1 +1,19 @@
-Hello World
+{% extends 'parse/base.html' %}
+
+{% block index %}
+
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3 form-group">
+            <label for="search_box" class="control-label"></label>
+            <form action="/search/" method="get">
+                <div class="input-group">
+                    <input id="search_box" type="text" class="form-control" name="q">
+                    <span class="input-group-btn">
+                        <input id="search_button" type="submit" class="btn btn-primary" value="Search">
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
