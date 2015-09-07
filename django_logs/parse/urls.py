@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from parse import views
+from parse.views import ParseIndex
 
 urlpatterns = [
-    url(r'^$', views.ParseIndex.as_view(), name="index"),
+    url(r'^$', ParseIndex.as_view(), name="index"),
 ]
